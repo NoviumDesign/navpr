@@ -1,0 +1,22 @@
+{
+  "name": "NavPR",
+  "version": "1.0.0",
+  "authors": [
+    "Anton Kjörck Lindén <anton@noviumdesign.se>"
+  ],
+  "description": "Site for NavPR",
+  "main": "Gruntfile.js",
+  "license": "Private",
+  "homepage": "www.noviumdesign.se",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "compass-breakpoint": "~2.6.1",
+    "susy": "~2.2.6"
+  }
+}

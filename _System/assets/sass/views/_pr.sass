@@ -1,0 +1,12 @@
+section.pr
+  z-index: 6
+  background-color: $light-gray
+
+  .left
+    display: none
+    @include breakpoint($medium-screen)
+      display: block
+      +span(6)
+  .right
+    @include breakpoint($medium-screen)
+      +span(last 6)

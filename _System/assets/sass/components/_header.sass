@@ -1,0 +1,23 @@
+header
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  z-index: 9999
+  height: 55px
+  background-color: $light-gray
+  padding: 15px 15px 15px em(40px)
+
+  .symbol
+    display: block
+    position: absolute
+    left: 15px
+    top: 8px
+    height: 40px
+    width: 40px
+    background-image: url('/_System/assets/img/gold-symbol.svg')
+    background-position: center center
+    background-size: 100%
+    background-repeat: no-repeat
+    +breakpoint($medium-screen)
+      display: none

@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+$susy: (
+  container: em(1200),
+  gutters: 1,
+  columns: 12
+);
+
+$medium-screen: em(640);
+$large-screen: em(860);
+$phone-only: max-width $medium-screen

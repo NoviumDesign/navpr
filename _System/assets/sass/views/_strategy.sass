@@ -1,0 +1,14 @@
+.strategy
+  z-index: 5
+  background-color: #FFFFFF
+  > div
+    padding-top: em(30px)
+
+  .container
+    +breakpoint($medium-screen)
+      .left
+        +span(6)
+        img
+          padding-top: em(55px)
+      .right
+        +span(last 6)
