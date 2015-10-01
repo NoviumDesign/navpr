@@ -5,10 +5,24 @@
     padding-top: em(30px)
 
   .container
-    +breakpoint($medium-screen)
-      .left
+
+    .left
+      +breakpoint($medium-screen)
+        +span(8)
+        position: relative
+        z-index: 2
+
+      +breakpoint($large-screen)
         +span(6)
-        img
-          padding-top: em(55px)
-      .right
+
+    .right
+      +breakpoint($medium-screen)
         +span(last 6)
+        position: absolute
+        right: $base-padding
+        z-index: 1
+        opacity: 0.15
+
+      +breakpoint($large-screen)
+        position: initial
+        opacity: 1

@@ -1,0 +1,15 @@
+#mobileNav
+  position: fixed
+  width: 100%
+  text-align: center
+  left: 0
+  right: 0
+  bottom: 0
+  top: 0
+  background: $gold
+  padding-top: 69px
+  +transform(translateY(-100%))
+  +transition(transform 0.5s ease-in-out)
+
+  &.active
+    +transform(translateY(0%))

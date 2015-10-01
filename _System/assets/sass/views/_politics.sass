@@ -1,9 +1,30 @@
 section.politics
   z-index: 4
   background-color: $light-gray
-  +breakpoint($medium-screen)
-    .container
-      .left
+
+  .container
+
+    .left
+      +breakpoint($medium-screen)
+        +span(12)
+        position: absolute
+        bottom: 0
+        opacity: 0.1
+
+      +breakpoint($large-screen)  
         +span(7)
-      .right
+        position: initial
+        opacity: 1
+
+    .right
+      +breakpoint($medium-screen)
+        +span(12)
+
+        p
+          max-width: $max-paragraph-width
+
+      +breakpoint($large-screen)
         +span(last 5)
+
+        p
+          max-width: none

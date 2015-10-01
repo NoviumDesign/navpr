@@ -1,11 +1,33 @@
 section.media
   z-index: 2
   background-color: $light-gray
+
   .container
-    +breakpoint($medium-screen)
-      .left
-        +span(6)
+
+    .left
+      +breakpoint($medium-screen)
+        +span(12)
+        position: absolute
+        bottom: 0
+        opacity: 0.1
+
         img
           padding-top: em(55px)
-      .right
-        +span(last 6)
+
+      +breakpoint($large-screen)
+        +span(6)
+        position: initial
+        opacity: 1
+
+    .right
+      +breakpoint($medium-screen)
+        +span(12)
+
+        p
+          max-width: $max-paragraph-width
+
+      +breakpoint($large-screen)
+        +span(6 last)
+
+        p
+          max-width: none

@@ -4,9 +4,17 @@ section.pr
 
   .left
     display: none
-    @include breakpoint($medium-screen)
+
+    +breakpoint($medium-screen)
       display: block
+      +span(4)
+
+    +breakpoint($large-screen)
       +span(6)
+
   .right
-    @include breakpoint($medium-screen)
+    +breakpoint($medium-screen)
+      +span(last 8)
+
+    +breakpoint($large-screen)
       +span(last 6)

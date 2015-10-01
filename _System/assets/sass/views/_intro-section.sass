@@ -1,18 +1,28 @@
 section.intro
   z-index: 1
-  @include breakpoint($phone-only)
+
+  +breakpoint($phone-only)
     padding-top: 15px
     padding-bottom: 15px
+
   .left
-    @include breakpoint($medium-screen)
-      +span(6)
+    +breakpoint($medium-screen)
+      +span(8)
       padding-right: em(30px)
+
+    +breakpoint($large-screen)
+      +span(6)
+
   .right
     display: none
-    @include breakpoint($medium-screen)
+    
+    +breakpoint($medium-screen)
       display: block
+      +span(last 4)
+
+    +breakpoint($large-screen)
       +span(last 6)
 
   img.nav-logo
-    @include breakpoint($medium-screen)
+    +breakpoint($medium-screen)
       margin-top: em(30px)

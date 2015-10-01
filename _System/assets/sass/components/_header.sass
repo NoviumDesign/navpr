@@ -1,10 +1,12 @@
+$header-height: 55px
+
 header
   position: fixed
   left: 0
   right: 0
   top: 0
   z-index: 9999
-  height: 55px
+  height: $header-height
   background-color: $light-gray
   padding: 15px 15px 15px em(40px)
 
@@ -21,3 +23,29 @@ header
     background-repeat: no-repeat
     +breakpoint($medium-screen)
       display: none
+
+  // Mobile nav toggle
+  .nav-toggle-container
+    display: none
+    position: absolute
+    left: 0
+    right: 0
+    text-align: center
+    height: $header-height
+    z-index: 2
+
+    +breakpoint($phone-only)
+      display: block
+
+  .nav-toggle
+    background-image: url('/_System/assets/img/arrow-down-black.svg')
+    background-size: cover
+    background-repeat: no-repeat
+    display: inline-block
+    height: 32px
+    width: 32px
+    cursor: pointer
+    +transition(all 0.2s linear)
+
+    &.active
+      +transform(rotate(180deg))
