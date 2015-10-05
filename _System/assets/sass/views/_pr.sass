@@ -2,8 +2,23 @@ section.pr
   z-index: 6
   background-color: $light-gray
 
+  .container
+    +breakpoint($phone-only)
+      padding-top: $base-padding*2.25
+      padding-bottom: em(100px)
+
   .left
-    display: none
+    +span(12)
+    position: absolute
+    bottom: em(35px)
+    left: 0
+    z-index: 1
+
+    +breakpoint($phone-only)
+      img
+        display: block
+        max-width: 75%
+        margin: auto
 
     +breakpoint($medium-screen)
       display: block
@@ -13,6 +28,10 @@ section.pr
       +span(6)
 
   .right
+    +breakpoint($phone-only)
+      position: relative
+      z-index: 2
+
     +breakpoint($medium-screen)
       +span(last 8)
 

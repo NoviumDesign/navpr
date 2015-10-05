@@ -1,10 +1,14 @@
 .crisis
   z-index: 3
-  background-image: url('/_System/assets/img/crisis.png')
+  background-image: url('/_System/assets/img/crisis.svg')
   background-position: center bottom
   background-size: em(1260px)
   background-color: #FFFFFF
+
   p
     max-width: $max-paragraph-width
+
   > div
-    padding-top: em(30px)
+
+    +breakpoint($phone-only)
+      padding-bottom: em(100px)

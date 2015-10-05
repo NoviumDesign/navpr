@@ -3,28 +3,40 @@ section.politics
   background-color: $light-gray
 
   .container
+    +breakpoint($phone-only)
+      padding-top: $base-padding*2
+      padding-bottom: em(100px)
 
     .left
-      +breakpoint($medium-screen)
-        +span(12)
-        position: absolute
-        bottom: 0
-        opacity: 0.1
+      +span(12)
+      position: absolute
+      bottom: 0
+      left: 0
+      opacity: 0.175
+
+      img
+        display: block
+
+        +breakpoint($phone-only)
+          max-width: 85%
+          margin: auto
 
       +breakpoint($large-screen)  
-        +span(7)
+        +span(6)
         position: initial
-        opacity: 1
+
+        img
+          width: 120%
+          max-width: 120%
 
     .right
-      +breakpoint($medium-screen)
-        +span(12)
+      +span(12)
 
-        p
-          max-width: $max-paragraph-width
+      p
+        max-width: $max-paragraph-width
 
       +breakpoint($large-screen)
-        +span(last 5)
+        +span(last 6)
 
         p
           max-width: none
