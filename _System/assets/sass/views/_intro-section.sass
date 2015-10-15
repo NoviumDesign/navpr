@@ -1,5 +1,9 @@
 section.intro
   z-index: 1
+  background-image: url('/_System/assets/img/start-bg.jpg')
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: bottom center
 
   +breakpoint($phone-only)
     padding-top: $base-padding*2.25
@@ -15,7 +19,7 @@ section.intro
 
   .right
     display: none
-    
+
     +breakpoint($medium-screen)
       display: block
       +span(last 4)
@@ -25,4 +29,4 @@ section.intro
 
   img.nav-logo
     +breakpoint($medium-screen)
-      margin-top: em(30px)
+      margin-bottom: em(20px)
