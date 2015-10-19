@@ -8,7 +8,9 @@
   p
     max-width: $max-paragraph-width
 
-  > div
 
-    +breakpoint($phone-only)
-      padding-bottom: em(100px)
+  +breakpoint($phone-only)
+    padding-top: $base-padding*2
+    
+    > div
+      padding-bottom: em(400px)

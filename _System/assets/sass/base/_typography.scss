@@ -20,16 +20,24 @@ h6 {
   margin: 0 0 $small-spacing;
   color: $gold;
   font-weight: normal;
-   
-  @include breakpoint($phone-only) {
-    word-break: break-all;
-  }
+  
 }
 
 h2 {
-  font-size: em(42px);
-  margin-bottom: rem(15px);
-  line-height: rem(44px);
+  font-size: em(39px);
+  margin-bottom: rem(13px);
+  line-height: rem(41px);
+
+  @include breakpoint($phone-only) {
+    color: $base-font-color;
+    font-size: em(24px);
+    margin-bottom: rem(10px);
+    line-height: rem(30px);
+  }
+}
+
+h3 {
+  margin-bottom: em(9px);
 }
 
 p {

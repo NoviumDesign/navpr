@@ -1,4 +1,6 @@
 $header-height: 55px
+$menu-stroke-height: 2px
+$menu-stroke-width: 20px
 
 header
   position: fixed
@@ -23,6 +25,8 @@ header
     background-repeat: no-repeat
     +breakpoint($medium-screen)
       display: none
+      right: 15px
+      left: auto
 
   // Mobile nav toggle
   .nav-toggle-container
@@ -30,6 +34,7 @@ header
     position: absolute
     left: 0
     right: 0
+    top: 0
     text-align: center
     height: $header-height
     z-index: 2
@@ -38,14 +43,44 @@ header
       display: block
 
   .nav-toggle
-    background-image: url('/_System/assets/img/arrow-down-black.svg')
-    background-size: cover
-    background-repeat: no-repeat
+    position: relative
     display: inline-block
-    height: 32px
-    width: 32px
+    height: 10px+$menu-stroke-height*2
+    width: $menu-stroke-width
     cursor: pointer
-    +transition(all 0.2s linear)
+    float: right
+    margin-top: 21px
+    margin-right: 15px
 
-    &.active
-      +transform(rotate(180deg))
+    &:before
+      content: ""
+      background: $base-font-color
+      height: $menu-stroke-height
+      width: $menu-stroke-width
+      position: absolute 
+      top: 0
+      left: 0
+      display: block 
+      +transition(all linear 0.2s)
+    
+    &:after
+      content: "" 
+      background: $base-font-color 
+      height: $menu-stroke-height
+      width: $menu-stroke-width
+      position: absolute 
+      top: 10px
+      left: 0
+      display: block 
+      +transition(all linear 0.2s)
+    
+    &.close
+      &:before
+        transform: rotate(45deg) 
+        top: 0
+        width: $menu-stroke-width
+
+      &:after
+        transform: rotate(-45deg) 
+        top: 0
+        width: $menu-stroke-width

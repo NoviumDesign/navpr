@@ -1,13 +1,28 @@
 section.our-team
   z-index: 8
   background-color: #FFFFFF
+  
   .container
     +breakpoint($phone-only)
       padding-top: $base-padding*2
       padding-bottom: $base-padding*2
-  .card
+
     +breakpoint($medium-screen)
+      padding-top: $base-padding*2.25
+      padding-bottom: $base-padding*2.25
+
+  .card
+    margin-bottom: em(20px)
+
+    +breakpoint($medium-screen)
+      +gallery(6 of 12)
+      margin-bottom: em(12px)
+
+    +breakpoint($large-screen)
       +gallery(4 of 12)
+
+    h3
+      font-family: 'Graphik-Semibold', $base-font-family
 
 .grey
   background-color: $light-gray !important

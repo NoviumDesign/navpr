@@ -4,22 +4,26 @@ section.media
 
   .container
     +breakpoint($phone-only)
-      padding-top: $base-padding*2.25
-      padding-bottom: em(100px)
+      padding-top: $base-padding*2
+      padding-bottom: em(380px)
 
     .left
-      +span(12)
+      +span(4)
       position: absolute
       bottom: 0
       left: 0
-      opacity: 0.175
+      opacity: $base-opacity
+      
+      +breakpoint($phone-only)
+        overflow: hidden
+        height: 370px
 
       img
         display: block
 
         +breakpoint($phone-only)
           max-width: 85%
-          margin: auto
+          margin-left: 25px
 
       +breakpoint($large-screen)
         +span(6)

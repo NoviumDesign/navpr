@@ -1,9 +1,17 @@
 .about-us
   z-index: 2
   background-color: #FFFFFF
+  +breakpoint($phone-only)
+    padding-top: $base-padding*2
+    padding-bottom: $base-padding*2
+
+  +breakpoint($medium-screen)
+    padding: $base-padding*2.25 0px
+
   .left
     +breakpoint($medium-screen)
       +span(6 of 12)
+  
   .right
     +breakpoint($medium-screen)
       +span(6 of 12 last)
