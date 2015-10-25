@@ -1,5 +1,5 @@
 section.politics
-  z-index: 5
+  z-index: 3
   background-color: $light-gray
 
   .container
@@ -26,8 +26,9 @@ section.politics
         position: initial
 
         img
-          width: 120%
-          max-width: 120%
+          @media screen and (min-width:0\0) and (min-resolution: +72dpi)
+            // IE9+ CSS
+            width: 100%
 
     .right
       +span(12)

@@ -1,6 +1,6 @@
 section.media
-  z-index: 3
-  background-color: $light-gray
+  z-index: 4
+  background-color: #FFFFFF
 
   .container
     +breakpoint($phone-only)
@@ -31,6 +31,9 @@ section.media
 
         img
           padding-top: em(55px)
+          @media screen and (min-width:0\0) and (min-resolution: +72dpi)
+            // IE9+ CSS
+            width: 85%
 
     .right
       +span(12)
