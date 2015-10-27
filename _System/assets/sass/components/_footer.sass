@@ -6,9 +6,14 @@ footer
 
   .row
     +container(em(1200px))
+
   .col
-    width: em(330px)
     float: left
+    width: 100%
+
+    +breakpoint($medium-screen)
+      width: em(330px)
+      
   .branding
     margin-top: em(40px)
 

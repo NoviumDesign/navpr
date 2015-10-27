@@ -8,7 +8,7 @@ section.politics
       padding-bottom: em(320px)
 
     .left
-      +span(6)
+      +span(12)
       position: absolute
       bottom: 0
       left: 0
@@ -17,15 +17,25 @@ section.politics
       img
         display: block
 
-        +breakpoint($phone-only)
+      +breakpoint($phone-only)
+        img
           max-width: 85%
           margin: auto
 
+        .bottom-align
+          position: relative
+
+      +breakpoint($medium-screen)
+        img
+          max-height: 300px
+
       +breakpoint($large-screen)
         +span(6)
-        position: initial
+        position: relative
 
         img
+          max-height: 100%
+
           @media screen and (min-width:0\0) and (min-resolution: +72dpi)
             // IE9+ CSS
             width: 100%

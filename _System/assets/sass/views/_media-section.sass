@@ -8,7 +8,7 @@ section.media
       padding-bottom: em(380px)
 
     .left
-      +span(4)
+      +span(12)
       position: absolute
       bottom: 0
       left: 0
@@ -18,6 +18,9 @@ section.media
         overflow: hidden
         height: 370px
 
+        .bottom-align
+          bottom: auto
+
       img
         display: block
 
@@ -25,9 +28,15 @@ section.media
           max-width: 85%
           margin-left: 25px
 
+        +breakpoint($medium-screen)
+          max-height: 340px
+
+        +breakpoint($large-screen)
+          max-height: 100%
+
       +breakpoint($large-screen)
         +span(6)
-        position: initial
+        position: relative
 
         img
           padding-top: em(55px)
