@@ -11,5 +11,6 @@ $susy: (
 $medium-screen: em(640);
 $large-screen: em(860);
 $high-screen: min-height em(1100);
+$low-screen: max-height em(820);
 $phone-only: max-width $medium-screen;
 $phone-tablet-only: max-width $large-screen;
