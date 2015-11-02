@@ -16,7 +16,7 @@ $(function() {
       currentClass: 'active',
       scrollThreshold: 0.28
   });
-  $('#mobileNav a').click({
-    $('#mobileNav').removeClass('active')
-  })
+  $('#mobileNav a').click(function() {
+    $('#mobileNav').removeClass('active');
+  });
 });
